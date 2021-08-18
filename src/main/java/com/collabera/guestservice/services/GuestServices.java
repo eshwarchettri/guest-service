@@ -16,12 +16,12 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class GuestServices {
 
-    private GuestSharedObjectTransformer guestSharedObjectTransformer;
-    private GuestEntityTransformer entityTransformer;
-    private GuestRepository guestRepository;
+    private final GuestSharedObjectTransformer guestSharedObjectTransformer;
+    private final GuestEntityTransformer entityTransformer;
+    private final GuestRepository guestRepository;
 
     public List<GuestSharedObject> getAllGuestDetails() {
-        return guestRepository.findAll().stream().map(guest -> guestSharedObjectTransformer.transfer(guest)).collect(Collectors.toList());
+        return guestRepository.findAll().stream().map(guestSharedObjectTransformer::transfer).collect(Collectors.toList());
     }
 
     public GuestSharedObject getByGuestId(Long id) {
@@ -47,7 +47,7 @@ public class GuestServices {
     }
 
     public void deleteGuest(Long id) {
-        guestRepository.findById(id).ifPresent(d -> guestRepository.delete(d));
+        guestRepository.findById(id).ifPresent(guestRepository::delete);
     }
 
 }
