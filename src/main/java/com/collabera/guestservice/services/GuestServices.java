@@ -1,10 +1,11 @@
 package com.collabera.guestservice.services;
 
-import com.example.guestbook.EntityToSharedObjectTransformer.GuestSharedObjectTransformer;
-import com.example.guestbook.Repository.GuestRepository;
-import com.example.guestbook.entities.Guest;
-import com.example.guestbook.sharedObjectToEntityTranformer.GuestEntityTransformer;
-import com.example.guestbook.sharedobject.GuestSharedObject;
+import com.collabera.guestservice.EntityToSharedObjectTransformer.GuestSharedObjectTransformer;
+
+import com.collabera.guestservice.Repository.GuestRepository;
+import com.collabera.guestservice.entities.Guest;
+import com.collabera.guestservice.sharedObjectToEntityTranformer.GuestEntityTransformer;
+import com.collabera.guestservice.sharedobject.GuestSharedObject;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

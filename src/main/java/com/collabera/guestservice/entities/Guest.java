@@ -2,12 +2,16 @@ package com.collabera.guestservice.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
 @Entity
+@SQLDelete(sql = "update guest set is_deleted = 1 where GUEST_ID=? ")
+@Where(clause = "is_deleted = 0")
 public class Guest {
 
     @Id
@@ -29,9 +33,11 @@ public class Guest {
     @Column(name="CHECKOUT_DATETIME")
     private LocalDateTime checkoutDateTime;
 
-    @OneToOne(mappedBy = "ROOM_ID" ,cascade = CascadeType.ALL)
+    @JoinColumn(name = "ROOM_ID")
+    @OneToOne(cascade = CascadeType.ALL)
     private Room room;
 
+    @Column(name = "IS_DELETED")
     private Boolean isDeleted = false;
 
 }

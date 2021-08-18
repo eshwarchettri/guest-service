@@ -2,11 +2,11 @@ package com.collabera.guestservice.sharedobject;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
-
-public class GuestSharedObject {
+public class GuestSharedObject implements Serializable {
     private Long guestId;
     private String guestFirstName;
     private String guestLastName;

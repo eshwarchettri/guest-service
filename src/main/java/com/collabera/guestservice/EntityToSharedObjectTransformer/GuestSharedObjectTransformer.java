@@ -1,16 +1,17 @@
 package com.collabera.guestservice.EntityToSharedObjectTransformer;
 
-import com.example.guestbook.entities.Guest;
-import com.example.guestbook.sharedobject.GuestSharedObject;
+
+import com.collabera.guestservice.entities.Guest;
+import com.collabera.guestservice.sharedobject.GuestSharedObject;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 @Component
 public class GuestSharedObjectTransformer {
 
-    public  GuestSharedObject transfer(Guest g) {
-    GuestSharedObject guestSharedObject = new GuestSharedObject();
-        BeanUtils.copyProperties(g, guestSharedObject);
-        return  guestSharedObject;
+    public GuestSharedObject transfer(Guest g) {
+        ModelMapper modelMapper = new ModelMapper();
+        return modelMapper.map(g, GuestSharedObject.class);
     }
 }
