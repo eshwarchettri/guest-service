@@ -1,5 +1,6 @@
 package com.collabera.guestservice.sharedobject;
 
+import com.collabera.guestservice.entities.RoomPreferences;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -13,6 +14,32 @@ public class GuestSharedObject implements Serializable {
     private LocalDateTime checkinDateTime;
     private LocalDateTime checkoutDateTime;
     private RoomSharedObject room;
-    private Boolean isDeleted=false;
+    private Boolean isDeleted = false;
+
+    private long zipCode;
+
+    private String firstAddress;
+
+    private RoomPreferences roomPreferences;
+
+    private String secondAddress;
+
+
+    private String City;
+
+
+    private String phone;
+
+
+    private String specialInstruction;
+
+
+    private String email;
+
+    private Integer adults;
+
+
+    private Integer children;
+
 
 }

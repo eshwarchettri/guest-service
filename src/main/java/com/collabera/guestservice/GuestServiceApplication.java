@@ -8,6 +8,7 @@ public class GuestServiceApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GuestServiceApplication.class, args);
+        
     }
 
 }
