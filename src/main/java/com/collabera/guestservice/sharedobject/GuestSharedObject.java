@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Data
 public class GuestSharedObject implements Serializable {
-    private Long guestId;
+    private String guestId;
     private String guestFirstName;
     private String guestLastName;
     private LocalDateTime checkinDateTime;

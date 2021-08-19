@@ -3,6 +3,8 @@ package com.collabera.guestservice.Repository;
 import com.collabera.guestservice.entities.Guest;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface GuestRepository extends JpaRepository<Guest,Long> {
+import java.util.List;
 
+public interface GuestRepository extends JpaRepository<Guest,String> {
+List<Guest> findAllByIsDeletedFalse();
 }

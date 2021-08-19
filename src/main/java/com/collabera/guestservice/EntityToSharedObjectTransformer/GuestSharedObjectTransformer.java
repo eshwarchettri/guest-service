@@ -4,7 +4,6 @@ package com.collabera.guestservice.EntityToSharedObjectTransformer;
 import com.collabera.guestservice.entities.Guest;
 import com.collabera.guestservice.sharedobject.GuestSharedObject;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 @Component

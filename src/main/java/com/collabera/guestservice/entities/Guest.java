@@ -2,6 +2,7 @@ package com.collabera.guestservice.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
@@ -10,14 +11,13 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@SQLDelete(sql = "update guest set is_deleted = 1 where GUEST_ID=? ")
-@Where(clause = "is_deleted = 0")
 public class Guest {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="GUEST_ID")
-    private long guestId;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    @Column(name="GUEST_ID", updatable = false, nullable = false, length = 40)
+    private String guestId;
 
     @Column(name = "GUEST_FIRST_NAME")
     private String guestFirstName;

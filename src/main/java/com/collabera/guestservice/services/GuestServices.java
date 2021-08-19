@@ -1,7 +1,6 @@
 package com.collabera.guestservice.services;
 
 import com.collabera.guestservice.EntityToSharedObjectTransformer.GuestSharedObjectTransformer;
-
 import com.collabera.guestservice.Repository.GuestRepository;
 import com.collabera.guestservice.entities.Guest;
 import com.collabera.guestservice.sharedObjectToEntityTranformer.GuestEntityTransformer;
@@ -21,10 +20,10 @@ public class GuestServices {
     private final GuestRepository guestRepository;
 
     public List<GuestSharedObject> getAllGuestDetails() {
-        return guestRepository.findAll().stream().map(guestSharedObjectTransformer::transfer).collect(Collectors.toList());
+        return guestRepository.findAllByIsDeletedFalse().stream().map(guestSharedObjectTransformer::transfer).collect(Collectors.toList());
     }
 
-    public GuestSharedObject getByGuestId(Long id) {
+    public GuestSharedObject getByGuestId(String id) {
         return  guestSharedObjectTransformer.transfer(guestRepository.findById(id).orElse(new Guest()));
 
     }
@@ -35,7 +34,7 @@ public class GuestServices {
         return guestSharedObjectTransformer.transfer(guest);
     }
 
-    public void updateGuestDetails(GuestSharedObject g, Long id) {
+    public void updateGuestDetails(GuestSharedObject g, String id) {
         guestRepository.findById(id).ifPresent(guest1 -> {
             guest1.setCheckinDateTime(g.getCheckinDateTime());
             guest1.setCheckoutDateTime(g.getCheckoutDateTime());
@@ -46,8 +45,11 @@ public class GuestServices {
         });
     }
 
-    public void deleteGuest(Long id) {
-        guestRepository.findById(id).ifPresent(guestRepository::delete);
+    public void deleteGuest(String id) {
+        guestRepository.findById(id).ifPresent(guest -> {
+            guest.setIsDeleted(true);
+            guestRepository.save(guest);
+        });
     }
 
 }

@@ -20,7 +20,7 @@ public class GuestController {
     }
 
     @GetMapping("/guest/{id}")
-    public GuestSharedObject getByGuestId(@PathVariable("id") Long id) {
+    public GuestSharedObject getByGuestId(@PathVariable("id") String id) {
         return guestServices.getByGuestId(id);
     }
 
@@ -30,12 +30,12 @@ public class GuestController {
     }
 
     @PutMapping("/guest")
-    public void updateGuestDetails(@RequestBody GuestSharedObject guest, @PathVariable("id") Long id) {
+    public void updateGuestDetails(@RequestBody GuestSharedObject guest, @PathVariable("id") String id) {
         guestServices.updateGuestDetails(guest, id);
     }
 
-    @DeleteMapping("/guest/{id}")
-    public void deleteGuest(@PathVariable("id") Long id) {
+    @DeleteMapping("/delete-guest/{id}")
+    public void deleteGuest(@PathVariable("id") String id) {
         guestServices.deleteGuest(id);
     }
 
