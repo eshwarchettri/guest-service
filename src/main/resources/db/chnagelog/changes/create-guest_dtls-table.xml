@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet author="meghna" id="21082021">
+        <createTable tableName="GUEST_DTLS">
+            <column name="GUEST_ID" type="VARCHAR(40)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="GUEST_DTLS" type="VARCHAR(40)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FIRST_NAME" type="VARCHAR(40)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_NAME" type="VARCHAR(40)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CHECKIN_DATETIME" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CHECKOUT_DATETIME" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FIRST_ADDRESS" type="VARCHAR(55)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SECOND_ADDRESS" type="timestamp">
+            </column>
+
+            <column name="CHECKOUT_DATETIME" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+
+
+            <column name="address" type="VARCHAR(255)"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="person"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
