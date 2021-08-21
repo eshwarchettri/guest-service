@@ -3,14 +3,13 @@ package com.collabera.guestservice.entities;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.SQLDelete;
-import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
 @Entity
+@Table(name = "GUEST_DTLS")
 public class Guest {
 
     @Id
@@ -19,56 +18,59 @@ public class Guest {
     @Column(name = "GUEST_ID", updatable = false, nullable = false, length = 40)
     private String guestId;
 
-    @Column(name = "GUEST_FIRST_NAME")
+    @Column(name = "FIRST_NAME", nullable = false, length = 40)
     private String guestFirstName;
 
-    @Column(name = "GUEST_LAST_NAME")
+    @Column(name = "LAST_NAME", nullable = false, length = 40)
     private String guestLastName;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @Column(name = "CHECKIN_DATETIME")
+    @Column(name = "CHECKIN_DATETIME", nullable = false)
     private LocalDateTime checkinDateTime;
 
     @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")
-    @Column(name = "CHECKOUT_DATETIME")
+    @Column(name = "CHECKOUT_DATETIME", nullable = false)
     private LocalDateTime checkoutDateTime;
 
-    @Column(name = "FIRST_ADDRESS")
+    @Column(name = "FIRST_ADDRESS", nullable = false, length = 55)
     private String firstAddress;
 
     @Column(name = "SECOND_ADDRESS")
     private String secondAddress;
 
-    @Column(name = "CITY")
+    @Column(name = "CITY", nullable = false, length = 40)
     private String city;
 
-    @Column(name = "PHONE")
+    @Column(name = "STATE", nullable = false, length = 40)
+    private String state;
+
+    @Column(name = "PHONE", nullable = false, length = 12)
     private String phone;
 
-    @Column(name = "SPECIAL_INSTRUCTION")
+    @Column(name = "SPECIAL_INSTRUCTION", nullable = false, length = 140)
     private String specialInstruction;
 
-    @Column(name = "E-MAIL")
+    @Column(name = "E_MAIL", nullable = false)
     private String email;
 
-    @Column(name = "ZIP_CODE")
+    @Column(name = "ZIP_CODE", nullable = false, length = 6)
     private Long zipCode;
 
-    @Column(name = "ADULTS")
-    private Integer adults;
+    @Column(name = "ADULTS", nullable = false, length = 5)
+    private Long adults;
 
-    @Column(name = "CHILDREN")
-    private Integer children;
+    @Column(name = "CHILDREN", nullable = false, length = 5)
+    private Long children;
 
     @Column(name="ROOM_PREFERENCE")
     @Enumerated(EnumType.STRING)
     private RoomPreferences roomPreferences;
 
-    @JoinColumn(name = "ROOM_ID")
     @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "ROOM_ID")
     private Room room;
 
     @Column(name = "IS_DELETED")
-    private Boolean isDeleted = false;
+    private Boolean isDeleted;
 
 }

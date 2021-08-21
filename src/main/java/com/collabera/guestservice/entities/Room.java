@@ -6,15 +6,21 @@ import javax.persistence.*;
 
 @Data
 @Entity
+@Table(name = "ROOM_DTLS")
 public class Room {
-@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="ROOM_ID")
-    private long roomId;
-    @Column(name="ROOM_NUMBER")
-    private long roomNumber;
+    @Column(name = "ROOM_ID", nullable = false)
+    private Long roomId;
 
-  //  @OneToOne(mappedBy = "room")
-    //private Guest guest;
+    @Column(name = "ROOM_NUMBER")
+    private Long roomNumber;
+
+    @Column(name = "IS_AVAILABLE")
+    private Boolean isAvailable;
+
+    @Column(name = "ROOM_TYPE")
+    @Enumerated(EnumType.STRING)
+    private RoomPreferences roomType;
 
 }
