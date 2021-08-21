@@ -47,7 +47,7 @@ public class Guest {
     @Column(name = "PHONE", nullable = false, length = 12)
     private String phone;
 
-    @Column(name = "SPECIAL_INSTRUCTION", nullable = false, length = 140)
+    @Column(name = "SPECIAL_INSTRUCTION", length = 140)
     private String specialInstruction;
 
     @Column(name = "E_MAIL", nullable = false)
@@ -56,13 +56,13 @@ public class Guest {
     @Column(name = "ZIP_CODE", nullable = false, length = 6)
     private Long zipCode;
 
-    @Column(name = "ADULTS", nullable = false, length = 5)
+    @Column(name = "ADULTS", nullable = false)
     private Long adults;
 
-    @Column(name = "CHILDREN", nullable = false, length = 5)
+    @Column(name = "CHILDREN", nullable = false)
     private Long children;
 
-    @Column(name="ROOM_PREFERENCE")
+    @Column(name="ROOM_PREFERENCE", nullable = false)
     @Enumerated(EnumType.STRING)
     private RoomPreferences roomPreferences;
 
