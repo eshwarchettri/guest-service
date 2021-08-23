@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <changeSet author="meghna" id="21082021">
+        <insert tableName="ROOM_DTLS">
+            <!--<column name="id" valueNumeric="1"/>-->
+            <column name="ROOM_ID" value="1"/>
+            <column name="ROOM_NO" value="1"/>
+            <column name="IS_AVAILABLE" value="true"/>
+            <column name="ROOM_TYPE" value="DELUX"/>
+        </insert>
+
+        <insert tableName="ROOM_DTLS">
+            <!--<column name="id" valueNumeric="1"/>-->
+            <column name="ROOM_ID" value="2"/>
+            <column name="ROOM_NO" value="2"/>
+            <column name="IS_AVAILABLE" value="true"/>
+            <column name="ROOM_TYPE" value="DELUX"/>
+        </insert>
+
+        <insert tableName="ROOM_DTLS">
+            <!--<column name="id" valueNumeric="1"/>-->
+            <column name="ROOM_ID" value="3"/>
+            <column name="ROOM_NO" value="3"/>
+            <column name="IS_AVAILABLE" value="true"/>
+            <column name="ROOM_TYPE" value="DELUX"/>
+        </insert>
+        <insert tableName="ROOM_DTLS">
+            <!--<column name="id" valueNumeric="1"/>-->
+            <column name="ROOM_ID" value="4"/>
+            <column name="ROOM_NO" value="4"/>
+            <column name="IS_AVAILABLE" value="true"/>
+            <column name="ROOM_TYPE" value="STANDARD"/>
+        </insert>
+
+        <insert tableName="ROOM_DTLS">
+            <!--<column name="id" valueNumeric="1"/>-->
+            <column name="ROOM_ID" value="5"/>
+            <column name="ROOM_NO" value="5"/>
+            <column name="IS_AVAILABLE" value="true"/>
+            <column name="ROOM_TYPE" value="STANDARD"/>
+        </insert>
+
+        <insert tableName="ROOM_DTLS">
+            <!--<column name="id" valueNumeric="1"/>-->
+            <column name="ROOM_ID" value="6"/>
+            <column name="ROOM_NO" value="6"/>
+            <column name="IS_AVAILABLE" value="true"/>
+            <column name="ROOM_TYPE" value="STANDARD"/>
+        </insert>
+
+        <insert tableName="ROOM_DTLS">
+            <!--<column name="id" valueNumeric="1"/>-->
+            <column name="ROOM_ID" value="7"/>
+            <column name="ROOM_NO" value="7"/>
+            <column name="IS_AVAILABLE" value="true"/>
+            <column name="ROOM_TYPE" value="SUITE"/>
+        </insert>
+
+        <insert tableName="ROOM_DTLS">
+            <!--<column name="id" valueNumeric="1"/>-->
+            <column name="ROOM_ID" value="8"/>
+            <column name="ROOM_NO" value="8"/>
+            <column name="IS_AVAILABLE" value="true"/>
+            <column name="ROOM_TYPE" value="SUITE"/>
+        </insert>
+
+        <insert tableName="ROOM_DTLS">
+            <!--<column name="id" valueNumeric="1"/>-->
+            <column name="ROOM_ID" value="9"/>
+            <column name="ROOM_NO" value="9"/>
+            <column name="IS_AVAILABLE" value="true"/>
+            <column name="ROOM_TYPE" value="SUITE"/>
+        </insert>
+
+
+    </changeSet>
+
+
+</databaseChangeLog>
