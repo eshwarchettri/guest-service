@@ -10,10 +10,7 @@
             <column name="GUEST_ID" type="VARCHAR(40)">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="GUEST_DTLS" type="VARCHAR(40)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="FIRST_NAME" type="VARCHAR(40)">
+             <column name="FIRST_NAME" type="VARCHAR(40)">
                 <constraints nullable="false"/>
             </column>
             <column name="LAST_NAME" type="VARCHAR(40)">
@@ -25,21 +22,56 @@
             <column name="CHECKOUT_DATETIME" type="timestamp">
                 <constraints nullable="false"/>
             </column>
-            <column name="FIRST_ADDRESS" type="VARCHAR(55)">
+            <column name="FIRST_ADDRESS" type="VARCHAR(100)">
                 <constraints nullable="false"/>
             </column>
-            <column name="SECOND_ADDRESS" type="timestamp">
+            <column name="SECOND_ADDRESS" type="VARCHAR(100)">
             </column>
 
-            <column name="CHECKOUT_DATETIME" type="timestamp">
+
+
+            <column name="CITY" type="VARCHAR(55)">
+            <constraints nullable="false"/>
+            </column>
+
+            <column name="STATE" type="VARCHAR(55)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="PHONE" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="SPECIAL_INSTRUCTION" type="VARCHAR(140)"/>
+
+            <column name="E_MAIL" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="ZIP_CODE" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="ROOM_PREFERENCE" type="VARCHAR(6)">
+            <constraints nullable="false"/>
+        </column>
+
+            <column name="ROOM_ID" type="bigint">
+
+            </column>
+
+
+            <column name="ADULTS" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CHILDREN" type="INT">
                 <constraints nullable="false"/>
             </column>
 
 
-            <column name="address" type="VARCHAR(255)"/>
         </createTable>
         <rollback>
-            <dropTable tableName="person"/>
+            <dropTable tableName="GUEST_DTLS"/>
         </rollback>
     </changeSet>
 </databaseChangeLog>
