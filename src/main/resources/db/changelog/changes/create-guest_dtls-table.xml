@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet author="meghna" id="21082021">
+        <createTable tableName="GUEST_DTLS">
+            <column name="GUEST_ID" type="VARCHAR(40)">
+                <constraints primaryKey="true"/>
+            </column>
+             <column name="FIRST_NAME" type="VARCHAR(40)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_NAME" type="VARCHAR(40)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CHECKIN_DATETIME" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CHECKOUT_DATETIME" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FIRST_ADDRESS" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SECOND_ADDRESS" type="VARCHAR(100)">
+            </column>
+
+
+
+            <column name="CITY" type="VARCHAR(55)">
+            <constraints nullable="false"/>
+            </column>
+
+            <column name="STATE" type="VARCHAR(55)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="PHONE" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="SPECIAL_INSTRUCTION" type="VARCHAR(140)"/>
+
+            <column name="E_MAIL" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="ZIP_CODE" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="ROOM_PREFERENCE" type="VARCHAR(6)">
+            <constraints nullable="false"/>
+        </column>
+
+            <column name="ROOM_ID" type="bigint">
+
+            </column>
+
+
+            <column name="ADULTS" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CHILDREN" type="INT">
+                <constraints nullable="false"/>
+            </column>
+
+
+        </createTable>
+        <rollback>
+            <dropTable tableName="GUEST_DTLS"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

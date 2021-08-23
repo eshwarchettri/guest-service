@@ -44,7 +44,7 @@ public class Guest {
     @Column(name = "STATE", nullable = false, length = 40)
     private String state;
 
-    @Column(name = "PHONE", nullable = false, length = 12)
+    @Column(name = "PHONE", nullable = false, length = 10)
     private String phone;
 
     @Column(name = "SPECIAL_INSTRUCTION", length = 140)
