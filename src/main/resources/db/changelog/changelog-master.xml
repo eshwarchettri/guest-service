@@ -8,4 +8,6 @@
     <include file="/db/changelog/changes/create-guest_dtls-table.xml"/>
     <include file="/db/changelog/changes/create-room_dtls-table.xml"/>
     <include file="/db/changelog/changes/insert-room_dtls-table.xml"/>
+    <include file="/db/changelog/changes/insert-guest_dtls-table.xml"/>
+
 </databaseChangeLog>

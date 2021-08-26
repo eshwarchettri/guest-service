@@ -11,7 +11,7 @@
         <insert tableName="ROOM_DTLS">
             <!--<column name="id" valueNumeric="1"/>-->
             <column name="ROOM_ID" value="1"/>
-            <column name="ROOM_NO" value="1"/>
+            <column name="ROOM_NUMBER" value="1"/>
             <column name="IS_AVAILABLE" value="true"/>
             <column name="ROOM_TYPE" value="DELUX"/>
         </insert>
@@ -19,7 +19,7 @@
         <insert tableName="ROOM_DTLS">
             <!--<column name="id" valueNumeric="1"/>-->
             <column name="ROOM_ID" value="2"/>
-            <column name="ROOM_NO" value="2"/>
+            <column name="ROOM_NUMBER" value="2"/>
             <column name="IS_AVAILABLE" value="true"/>
             <column name="ROOM_TYPE" value="DELUX"/>
         </insert>
@@ -27,14 +27,14 @@
         <insert tableName="ROOM_DTLS">
             <!--<column name="id" valueNumeric="1"/>-->
             <column name="ROOM_ID" value="3"/>
-            <column name="ROOM_NO" value="3"/>
+            <column name="ROOM_NUMBER" value="3"/>
             <column name="IS_AVAILABLE" value="true"/>
             <column name="ROOM_TYPE" value="DELUX"/>
         </insert>
         <insert tableName="ROOM_DTLS">
             <!--<column name="id" valueNumeric="1"/>-->
             <column name="ROOM_ID" value="4"/>
-            <column name="ROOM_NO" value="4"/>
+            <column name="ROOM_NUMBER" value="4"/>
             <column name="IS_AVAILABLE" value="true"/>
             <column name="ROOM_TYPE" value="STANDARD"/>
         </insert>
@@ -42,7 +42,7 @@
         <insert tableName="ROOM_DTLS">
             <!--<column name="id" valueNumeric="1"/>-->
             <column name="ROOM_ID" value="5"/>
-            <column name="ROOM_NO" value="5"/>
+            <column name="ROOM_NUMBER" value="5"/>
             <column name="IS_AVAILABLE" value="true"/>
             <column name="ROOM_TYPE" value="STANDARD"/>
         </insert>
@@ -50,7 +50,7 @@
         <insert tableName="ROOM_DTLS">
             <!--<column name="id" valueNumeric="1"/>-->
             <column name="ROOM_ID" value="6"/>
-            <column name="ROOM_NO" value="6"/>
+            <column name="ROOM_NUMBER" value="6"/>
             <column name="IS_AVAILABLE" value="true"/>
             <column name="ROOM_TYPE" value="STANDARD"/>
         </insert>
@@ -58,7 +58,7 @@
         <insert tableName="ROOM_DTLS">
             <!--<column name="id" valueNumeric="1"/>-->
             <column name="ROOM_ID" value="7"/>
-            <column name="ROOM_NO" value="7"/>
+            <column name="ROOM_NUMBER" value="7"/>
             <column name="IS_AVAILABLE" value="true"/>
             <column name="ROOM_TYPE" value="SUITE"/>
         </insert>
@@ -66,7 +66,7 @@
         <insert tableName="ROOM_DTLS">
             <!--<column name="id" valueNumeric="1"/>-->
             <column name="ROOM_ID" value="8"/>
-            <column name="ROOM_NO" value="8"/>
+            <column name="ROOM_NUMBER" value="8"/>
             <column name="IS_AVAILABLE" value="true"/>
             <column name="ROOM_TYPE" value="SUITE"/>
         </insert>
@@ -74,7 +74,7 @@
         <insert tableName="ROOM_DTLS">
             <!--<column name="id" valueNumeric="1"/>-->
             <column name="ROOM_ID" value="9"/>
-            <column name="ROOM_NO" value="9"/>
+            <column name="ROOM_NUMBER" value="9"/>
             <column name="IS_AVAILABLE" value="true"/>
             <column name="ROOM_TYPE" value="SUITE"/>
         </insert>

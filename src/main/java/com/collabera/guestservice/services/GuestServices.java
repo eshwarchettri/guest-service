@@ -7,6 +7,7 @@ import com.collabera.guestservice.sharedObjectToEntityTranformer.GuestEntityTran
 import com.collabera.guestservice.sharedobject.GuestSharedObject;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -45,9 +46,10 @@ public class GuestServices {
         });
     }
 
-    public void deleteGuest(String id) {
+    public void deleteGuest(String id , String reasonToDelete) {
         guestRepository.findById(id).ifPresent(guest -> {
             guest.setIsDeleted(true);
+            guest.setReasonToDelete(reasonToDelete);
             guestRepository.save(guest);
         });
     }
