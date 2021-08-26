@@ -16,10 +16,10 @@
             <column name="LAST_NAME" type="VARCHAR(40)">
                 <constraints nullable="false"/>
             </column>
-            <column name="CHECKIN_DATETIME" type="timestamp">
+            <column name="CHECKIN_DATETIME" type="datetime">
                 <constraints nullable="false"/>
             </column>
-            <column name="CHECKOUT_DATETIME" type="timestamp">
+            <column name="CHECKOUT_DATETIME" type="datetime">
                 <constraints nullable="false"/>
             </column>
             <column name="FIRST_ADDRESS" type="VARCHAR(100)">
@@ -52,7 +52,7 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="ROOM_PREFERENCE" type="VARCHAR(6)">
+            <column name="ROOM_PREFERENCE" type="VARCHAR(10)">
             <constraints nullable="false"/>
         </column>
 
@@ -67,6 +67,8 @@
             <column name="CHILDREN" type="INT">
                 <constraints nullable="false"/>
             </column>
+        <column name="REASON_TO_DELETE" type="varchar(100)"/>
+        <column name="IS_DELETED" type="boolean"/>
 
 
         </createTable>

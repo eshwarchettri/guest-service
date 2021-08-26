@@ -26,6 +26,7 @@ public class GuestSharedObject implements Serializable {
     private String email;
     private Integer adults;
     private Integer children;
+    private String reasonToDelete;
 
 
 }

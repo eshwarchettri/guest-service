@@ -73,4 +73,6 @@ public class Guest {
     @Column(name = "IS_DELETED")
     private Boolean isDeleted;
 
+    @Column(name="REASON_TO_DELETE")
+    private String reasonToDelete;
 }

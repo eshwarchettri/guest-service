@@ -11,7 +11,7 @@
     <column name="ROOM_ID" type="bigint">
         <constraints primaryKey="true"/>
     </column>
-    <column name="ROOM_NO" type="bigint">
+    <column name="ROOM_NUMBER" type="bigint">
         <constraints nullable="false"/>
     </column>
         <column name="IS_AVAILABLE" type="boolean">
