@@ -23,7 +23,7 @@
             <column name="ADULTS" value="2"/>
             <column name="CHILDREN" value="4"/>
             <column name="IS_DELETED" value="false"/>
-            <column name="ROOM_PREFERENCE" value="standard"/>
+            <column name="ROOM_PREFERENCE" value="STANDARD"/>
 
         </insert>
 
@@ -43,7 +43,7 @@
             <column name="ADULTS" value="2"/>
             <column name="CHILDREN" value="3"/>
             <column name="IS_DELETED" value="false"/>
-            <column name="ROOM_PREFERENCE" value="standard"/>
+            <column name="ROOM_PREFERENCE" value="STANDARD"/>
 
         </insert>
 
@@ -63,7 +63,7 @@
             <column name="ADULTS" value="1"/>
             <column name="CHILDREN" value="2"/>
             <column name="IS_DELETED" value="false"/>
-            <column name="ROOM_PREFERENCE" value="suite"/>
+            <column name="ROOM_PREFERENCE" value="SUITE"/>
 
         </insert>
 
@@ -83,7 +83,7 @@
             <column name="ADULTS" value="2"/>
             <column name="CHILDREN" value="4"/>
             <column name="IS_DELETED" value="false"/>
-            <column name="ROOM_PREFERENCE" value="suite"/>
+            <column name="ROOM_PREFERENCE" value="SUITE"/>
 
         </insert>
 
@@ -103,7 +103,7 @@
             <column name="ADULTS" value="1"/>
             <column name="CHILDREN" value="4"/>
             <column name="IS_DELETED" value="false"/>
-            <column name="ROOM_PREFERENCE" value="delux"/>
+            <column name="ROOM_PREFERENCE" value="DELUX"/>
 
         </insert>
 
@@ -124,7 +124,7 @@
             <column name="ADULTS" value="2"/>
             <column name="CHILDREN" value="3"/>
             <column name="IS_DELETED" value="false"/>
-            <column name="ROOM_PREFERENCE" value="delux"/>
+            <column name="ROOM_PREFERENCE" value="DELUX"/>
 
         </insert>
 
@@ -144,7 +144,7 @@
             <column name="ADULTS" value="3"/>
             <column name="CHILDREN" value="2"/>
             <column name="IS_DELETED" value="false"/>
-            <column name="ROOM_PREFERENCE" value="delux"/>
+            <column name="ROOM_PREFERENCE" value="DELUX"/>
 
         </insert>
 
@@ -164,7 +164,140 @@
             <column name="ADULTS" value="1"/>
             <column name="CHILDREN" value="0"/>
             <column name="IS_DELETED" value="false"/>
-            <column name="ROOM_PREFERENCE" value="standard"/>
+            <column name="ROOM_PREFERENCE" value="STANDARD"/>
+
+        </insert>
+        <insert tableName="GUEST_DTLS">
+            <column name="GUEST_ID" value="8ea04ae8-85c0-4b4d-922c-2600dbe19c49"/>
+            <column name="FIRST_NAME" value="Eshwar"/>
+            <column name="LAST_NAME" value="Chettri"/>
+            <column name="CHECKIN_DATETIME" valueDate="2021-02-21T12:00:00"/>
+            <column name="CHECKOUT_DATETIME" valueDate="2021-02-22T10:00:00"/>
+            <column name="FIRST_ADDRESS" value="darbhanga"/>
+            <column name="CITY" value="darbhanga"/>
+            <column name="STATE" value="Bihar"/>
+            <column name="PHONE" value="9876543220"/>
+            <column name="SPECIAL_INSTRUCTION" value="no disturbance"/>
+            <column name="E_MAIL" value="m@kumari.c"/>
+            <column name="ZIP_CODE" value="846004"/>
+            <column name="ADULTS" value="1"/>
+            <column name="CHILDREN" value="0"/>
+            <column name="IS_DELETED" value="false"/>
+            <column name="ROOM_PREFERENCE" value="STANDARD"/>
+
+        </insert>
+        <insert tableName="GUEST_DTLS">
+            <column name="GUEST_ID" value="8ea04ae8-85c0-4b4d-936c-2600dbe19c49"/>
+            <column name="FIRST_NAME" value="Sanjay"/>
+            <column name="LAST_NAME" value="Raman"/>
+            <column name="CHECKIN_DATETIME" valueDate="2021-02-21T12:00:00"/>
+            <column name="CHECKOUT_DATETIME" valueDate="2021-02-22T10:00:00"/>
+            <column name="FIRST_ADDRESS" value="darbhanga"/>
+            <column name="CITY" value="darbhanga"/>
+            <column name="STATE" value="Bihar"/>
+            <column name="PHONE" value="9876543220"/>
+            <column name="SPECIAL_INSTRUCTION" value="no disturbance"/>
+            <column name="E_MAIL" value="m@kumari.c"/>
+            <column name="ZIP_CODE" value="846004"/>
+            <column name="ADULTS" value="1"/>
+            <column name="CHILDREN" value="0"/>
+            <column name="IS_DELETED" value="false"/>
+            <column name="ROOM_PREFERENCE" value="STANDARD"/>
+
+        </insert>
+        <insert tableName="GUEST_DTLS">
+            <column name="GUEST_ID" value="8ea04ae8-85c0-4b4d-426c-2600dbe19c49"/>
+            <column name="FIRST_NAME" value="Suresh"/>
+            <column name="LAST_NAME" value="Kasala"/>
+            <column name="CHECKIN_DATETIME" valueDate="2021-02-21T12:00:00"/>
+            <column name="CHECKOUT_DATETIME" valueDate="2021-02-22T10:00:00"/>
+            <column name="FIRST_ADDRESS" value="darbhanga"/>
+            <column name="CITY" value="darbhanga"/>
+            <column name="STATE" value="Bihar"/>
+            <column name="PHONE" value="9876543220"/>
+            <column name="SPECIAL_INSTRUCTION" value="no disturbance"/>
+            <column name="E_MAIL" value="m@kumari.c"/>
+            <column name="ZIP_CODE" value="846004"/>
+            <column name="ADULTS" value="1"/>
+            <column name="CHILDREN" value="0"/>
+            <column name="IS_DELETED" value="false"/>
+            <column name="ROOM_PREFERENCE" value="STANDARD"/>
+
+        </insert>
+        <insert tableName="GUEST_DTLS">
+            <column name="GUEST_ID" value="8ea04ae8-85c0-4b4d-906c-2600dbe19c49"/>
+            <column name="FIRST_NAME" value="Yesobu"/>
+            <column name="LAST_NAME" value="kancharla"/>
+            <column name="CHECKIN_DATETIME" valueDate="2021-02-21T12:00:00"/>
+            <column name="CHECKOUT_DATETIME" valueDate="2021-02-22T10:00:00"/>
+            <column name="FIRST_ADDRESS" value="darbhanga"/>
+            <column name="CITY" value="darbhanga"/>
+            <column name="STATE" value="Bihar"/>
+            <column name="PHONE" value="9876543220"/>
+            <column name="SPECIAL_INSTRUCTION" value="no disturbance"/>
+            <column name="E_MAIL" value="m@kumari.c"/>
+            <column name="ZIP_CODE" value="846004"/>
+            <column name="ADULTS" value="1"/>
+            <column name="CHILDREN" value="0"/>
+            <column name="IS_DELETED" value="false"/>
+            <column name="ROOM_PREFERENCE" value="STANDARD"/>
+
+        </insert>
+        <insert tableName="GUEST_DTLS">
+            <column name="GUEST_ID" value="8ea04ae8-85c0-4d4d-926c-2600dbe19c49"/>
+            <column name="FIRST_NAME" value="Tanzeem"/>
+            <column name="LAST_NAME" value="Khanam"/>
+            <column name="CHECKIN_DATETIME" valueDate="2021-02-21T12:00:00"/>
+            <column name="CHECKOUT_DATETIME" valueDate="2021-02-22T10:00:00"/>
+            <column name="FIRST_ADDRESS" value="darbhanga"/>
+            <column name="CITY" value="darbhanga"/>
+            <column name="STATE" value="Bihar"/>
+            <column name="PHONE" value="9876543220"/>
+            <column name="SPECIAL_INSTRUCTION" value="no disturbance"/>
+            <column name="E_MAIL" value="m@kumari.c"/>
+            <column name="ZIP_CODE" value="846004"/>
+            <column name="ADULTS" value="1"/>
+            <column name="CHILDREN" value="0"/>
+            <column name="IS_DELETED" value="false"/>
+            <column name="ROOM_PREFERENCE" value="STANDARD"/>
+
+        </insert>
+        <insert tableName="GUEST_DTLS">
+            <column name="GUEST_ID" value="8ea04ae8-05c0-4b4d-926c-2600dbe19c49"/>
+            <column name="FIRST_NAME" value="Akash"/>
+            <column name="LAST_NAME" value="Shaw"/>
+            <column name="CHECKIN_DATETIME" valueDate="2021-02-21T12:00:00"/>
+            <column name="CHECKOUT_DATETIME" valueDate="2021-02-22T10:00:00"/>
+            <column name="FIRST_ADDRESS" value="darbhanga"/>
+            <column name="CITY" value="darbhanga"/>
+            <column name="STATE" value="Bihar"/>
+            <column name="PHONE" value="9876543220"/>
+            <column name="SPECIAL_INSTRUCTION" value="no disturbance"/>
+            <column name="E_MAIL" value="m@kumari.c"/>
+            <column name="ZIP_CODE" value="846004"/>
+            <column name="ADULTS" value="1"/>
+            <column name="CHILDREN" value="0"/>
+            <column name="IS_DELETED" value="false"/>
+            <column name="ROOM_PREFERENCE" value="STANDARD"/>
+
+        </insert>
+        <insert tableName="GUEST_DTLS">
+            <column name="GUEST_ID" value="8ea04ae8-05c0-4b4d-026c-2600dbe19c49"/>
+            <column name="FIRST_NAME" value="Devendra"/>
+            <column name="LAST_NAME" value="negi"/>
+            <column name="CHECKIN_DATETIME" valueDate="2021-02-21T12:00:00"/>
+            <column name="CHECKOUT_DATETIME" valueDate="2021-02-22T10:00:00"/>
+            <column name="FIRST_ADDRESS" value="darbhanga"/>
+            <column name="CITY" value="darbhanga"/>
+            <column name="STATE" value="Bihar"/>
+            <column name="PHONE" value="9876543220"/>
+            <column name="SPECIAL_INSTRUCTION" value="no disturbance"/>
+            <column name="E_MAIL" value="m@kumari.c"/>
+            <column name="ZIP_CODE" value="846004"/>
+            <column name="ADULTS" value="1"/>
+            <column name="CHILDREN" value="0"/>
+            <column name="IS_DELETED" value="false"/>
+            <column name="ROOM_PREFERENCE" value="STANDARD"/>
 
         </insert>
 

@@ -1,8 +1,12 @@
 package com.collabera.guestservice.controller;
 
+import com.collabera.guestservice.config.RestResponsePage;
 import com.collabera.guestservice.services.GuestServices;
 import com.collabera.guestservice.sharedobject.GuestSharedObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,9 +18,9 @@ public class GuestController {
     private GuestServices guestServices;
 
     @GetMapping("/guests")
-    public List<GuestSharedObject> getAllGuestDetails() {
+    public Page<GuestSharedObject> getAllGuestDetails(Pageable pageable) {
 
-        return this.guestServices.getAllGuestDetails();
+        return this.guestServices.getAllGuestDetails(pageable);
     }
 
     @GetMapping("/guest/{id}")

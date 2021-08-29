@@ -4,9 +4,9 @@ package com.collabera.guestservice.entities;
 import lombok.Getter;
 
 public enum RoomPreferences {
-    standard("STANDARD"),
-    delux("DELUX"),
-    suite("SUITE");
+    STANDARD("STANDARD"),
+    DELUX("DELUX"),
+    SUITE("SUITE");
 
     @Getter
     private String value;

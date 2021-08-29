@@ -2,10 +2,12 @@ package com.collabera.guestservice.services;
 
 import com.collabera.guestservice.EntityToSharedObjectTransformer.GuestSharedObjectTransformer;
 import com.collabera.guestservice.Repository.GuestRepository;
+import com.collabera.guestservice.config.RestResponsePage;
 import com.collabera.guestservice.entities.Guest;
 import com.collabera.guestservice.sharedObjectToEntityTranformer.GuestEntityTransformer;
 import com.collabera.guestservice.sharedobject.GuestSharedObject;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -20,8 +22,13 @@ public class GuestServices {
     private final GuestEntityTransformer entityTransformer;
     private final GuestRepository guestRepository;
 
-    public List<GuestSharedObject> getAllGuestDetails() {
-        return guestRepository.findAllByIsDeletedFalse().stream().map(guestSharedObjectTransformer::transfer).collect(Collectors.toList());
+    public Page<GuestSharedObject> getAllGuestDetails(Pageable pageable) {
+
+        Page<Guest> guests =  guestRepository.findAllByIsDeletedFalse(pageable);
+        List<GuestSharedObject> guestSharedObjectList = guests.getContent().stream().map(guestSharedObjectTransformer::transfer).collect(Collectors.toList());
+
+
+        return new PageImpl<>(guestSharedObjectList, pageable, guests.getTotalElements());
     }
 
     public GuestSharedObject getByGuestId(String id) {
